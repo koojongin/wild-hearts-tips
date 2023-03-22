@@ -22,7 +22,8 @@ jobs:
           # discord webhook url without /github
           webhook: ${{ secrets.DISCORD_WEBHOOK_URL }}
           template: 'avatar-with-link'
-          include-extras: true
+          message: "https://wildhearts.jiku.kr/\nSuccessful commit to **{{ github.context.payload.repository.owner.name }}/{{ github.context.payload.repository.name}}**.\nDiff: {{ github.context.payload.compare }}"
+          include-extras: false
           # A general message that is displayed for all commits. Defaults to the repo name.
           # message: # optional
           # JSON string that accepts double braces for templates. Defaults to template's embed template
