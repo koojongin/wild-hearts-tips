@@ -33,4 +33,4 @@ jobs:
           # The name of of a premade template.
           # template: # optional
           # Boolean - only show the last commit.
-          last-commit-only: true
+          last-commit-only: false
