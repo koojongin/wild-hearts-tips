@@ -1,0 +1,33 @@
+# Simple workflow for deploying static content to GitHub Pages
+name: Deploy static content to Pages
+
+on:
+  # Runs on pushes targeting the default branch
+  push:
+    branches: ["main","develop"]
+
+jobs:
+  # Single deploy job since we're just deploying
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Discord Commits
+        # You may pin to the exact commit or the version.
+        # uses: Sniddl/discord-commits@6bf11a849e2f812133e3f7e5df043d06fd262ee8
+        uses: Sniddl/discord-commits@v1.6
+        with:
+          # discord webhook url without /github
+          webhook: https://discord.com/api/webhooks/1088212118895067176/UB4H7K1HjsdO2MlUTSyQKliP9BtF3QlyiKBdfQjP_v2dQylKYmZ2aToj2Vtd-nBRfTsq
+          # A general message that is displayed for all commits. Defaults to the repo name.
+          # message: # optional
+          # JSON string that accepts double braces for templates. Defaults to template's embed template
+          # embed: # optional
+          # Boolean - Include extra embeds provided from templates.
+          # include-extras: # optional
+          # The name of of a premade template.
+          # template: # optional
+          # Boolean - only show the last commit.
+          last-commit-only: true
