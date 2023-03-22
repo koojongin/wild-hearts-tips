@@ -20,7 +20,9 @@ jobs:
         uses: Sniddl/discord-commits@v1.6
         with:
           # discord webhook url without /github
-          webhook: https://discord.com/api/webhooks/1088212118895067176/UB4H7K1HjsdO2MlUTSyQKliP9BtF3QlyiKBdfQjP_v2dQylKYmZ2aToj2Vtd-nBRfTsq
+          webhook: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          template: 'avatar-with-link'
+          include-extras: true
           # A general message that is displayed for all commits. Defaults to the repo name.
           # message: # optional
           # JSON string that accepts double braces for templates. Defaults to template's embed template
