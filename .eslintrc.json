@@ -5,17 +5,20 @@
     "node": true
   },
   "plugins": [
+    "prettier",
     "react",
     "@typescript-eslint"
   ],
   "parser": "@typescript-eslint/parser",
   "extends": [
-    "eslint:recommended",
     "plugin:react/recommended",
+    "plugin:prettier/recommended",
     "plugin:@typescript-eslint/recommended",
-    "airbnb"
+    "airbnb",
+    "prettier"
   ],
   "rules": {
+    "prettier/prettier": "error",
     "react/jsx-filename-extension": [
       "warn",
       {
@@ -27,6 +30,7 @@
     "react/react-in-jsx-scope": "off",
     "no-unused-vars": "warn",
     "import/extensions": "off",
-    "import/no-unresolved": "off"
+    "import/no-unresolved": "off",
+    "react/button-has-type": "off"
   }
 }

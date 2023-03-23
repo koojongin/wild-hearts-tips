@@ -2,6 +2,12 @@
   "name": "wild-hearts-tips",
   "version": "0.1.0",
   "private": true,
+  "scripts": {
+    "start": "set PORT=3001 &&react-scripts start",
+    "build": "set \"GENERATE_SOURCEMAP=false\" && react-scripts build",
+    "build-on-mac": "GENERATE_SOURCEMAP=false react-scripts build",
+    "eject": "react-scripts eject"
+  },
   "dependencies": {
     "@headlessui/react": "^1.7.13",
     "@heroicons/react": "^2.0.16",
@@ -19,12 +25,6 @@
     "react-scripts": "^5.0.1",
     "tailwindcss": "^3.2.7",
     "typescript": "^4.9.5"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "set \"GENERATE_SOURCEMAP=false\" && react-scripts build",
-    "build-on-mac": "GENERATE_SOURCEMAP=false react-scripts build",
-    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
