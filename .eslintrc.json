@@ -31,6 +31,9 @@
     "no-unused-vars": "warn",
     "import/extensions": "off",
     "import/no-unresolved": "off",
-    "react/button-has-type": "off"
-  }
+    "react/button-has-type": "off",
+    "import/prefer-default-export": "off",
+    "react/require-default-props": 0
+  },
+  "ignorePatterns": ["tailwind.config.js"]
 }

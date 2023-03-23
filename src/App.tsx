@@ -1,7 +1,7 @@
 import './App.css';
 import { initializeApp } from 'firebase/app';
 import { getAnalytics } from 'firebase/analytics';
-import ItemCard from './molecules/ItemCard';
+import ItemListPage from './pages/ItemListPage';
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -22,7 +22,7 @@ const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 
 function App() {
-  return <ItemCard name="gg" />;
+  return <ItemListPage />;
 }
 
 export default App;
